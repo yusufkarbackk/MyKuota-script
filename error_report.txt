@@ -1,0 +1,9 @@
+folder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-14 14:25:22.350543 @benzindonesia1 error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
+folder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
+folder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
+folder not foundfolder not found
