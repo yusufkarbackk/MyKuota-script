@@ -19,7 +19,7 @@ trimedUsername = username.replace(" ", "")
 # trimedPassword = "batiku232"
 # trimedUsername = "@dimapekan"
 
-profile_dir = f"C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-{trimedUsername}"
+profile_dir = f"C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-{trimedUsername}"
 chrome_profile = f"profile-{trimedUsername}"
 # Check if the directory exists, if not, create it
 if not os.path.exists(profile_dir):

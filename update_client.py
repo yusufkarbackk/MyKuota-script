@@ -1,29 +1,30 @@
 import json
 import os
+from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 import sys
 import datetime
 import shutil
 import tempfile
 from remove_folders import remove_folders
-
+load_dotenv()
 username = sys.argv[1]
 password = sys.argv[2]
 
 trimedPassword = password.replace(" ", "")
 trimedUsername = username.replace(" ", "")
 
-profile_dir = f"C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-{trimedUsername}"
+profile_dir = os.getenv("PROFILE_DIR") + trimedUsername
 
 chrome_profile = f"profile-{trimedUsername}"
 # Check if the directory exists, if not, create it
 if not os.path.exists(profile_dir):
     os.makedirs(profile_dir)
 
-with sync_playwright() as p:
+with sync_playwright() as p: 
     browser = p.chromium.launch_persistent_context(
         headless=False,
-        executable_path="C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        executable_path=os.getenv('EXECUTABLE_PATH'),
         user_data_dir=f"{profile_dir}",
         args=["--disable-notifications", "--disable-logging"],
         slow_mo=5000,
@@ -146,7 +147,7 @@ with sync_playwright() as p:
 
                         data = {"status": "success", "quota": quota, "unit": unit}
                         with open(
-                            "C:\\laragon\\www\\dev\\MyKuota-script\\error_report.txt", "a"
+                            "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
                         ) as file:
                             file.write(f"{data}\n")
 
@@ -242,7 +243,7 @@ with sync_playwright() as p:
         print(json.dumps(data))
         # sys.stdout.flush()
 
-        with open("C:\\laragon\\www\\dev\\MyKuota-script\\error_report.txt", "a") as file:
+        with open("C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a") as file:
             file.write(
                 f"update client {datetime.datetime.now()} {trimedUsername} error: {e}\n"
             )
