@@ -6,4 +6,104 @@ folder not foundfolder not foundfolder not foundfolder not foundfolder not found
 folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
 folder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
 folder not foundfolder not found{"status": "success", "quota": 11.98, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\BATI\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-DimaSurabaya", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-DimaSurabaya"}
+folder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@KKutabumi", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KKutabumi"}
+folder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@KKutabumi", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KKutabumi"}
+folder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 14:22:37.270947 @KKutabumi error: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("text=\"Masuk dengan metode lain\"")
+  -     - locator resolved to <button type="button" data-testid="loginBtn" class="LoginFormV2__style__socialBtn">Masuk dengan metode lain</button>
+  -   - attempting click action
+  -     2 × waiting for element to be visible, enabled and stable
+  -       - element is visible, enabled and stable
+  -       - scrolling into view if needed
+  -       - done scrolling
+  -       - <div id="wrap-button-1712206506010010" class="ins-adaptive-button-wrapper ins-adaptive-button-flex ins-selectable-element ins-element-wrap ins-element-grid-wrap ins-display-flex ins-sample-element-wrapper ins-element-select-menu ins-selected-option ins-default-cursor">…</div> from <div classname="ins-preview-wrapper ins-preview-wrapper-6271" class="ins-preview-wrapper ins-preview-wrapper-6271 ins-pos-middle-center">…</div> subtree intercepts pointer events
+  -     - retrying click action
+  -     - waiting 20ms
+  -     2 × waiting for element to be visible, enabled and stable
+  -       - element is visible, enabled and stable
+  -       - scrolling into view if needed
+  -       - done scrolling
+  -       - <div id="wrap-button-1712206506010010" class="ins-adaptive-button-wrapper ins-adaptive-button-flex ins-selectable-element ins-element-wrap ins-element-grid-wrap ins-display-flex ins-sample-element-wrapper ins-element-select-menu ins-selected-option ins-default-cursor">…</div> from <div classname="ins-preview-wrapper ins-preview-wrapper-6271" class="ins-preview-wrapper ins-preview-wrapper-6271 ins-pos-middle-center">…</div> subtree intercepts pointer events
+  -     - retrying click action
+  -       - waiting 100ms
+  -     57 × waiting for element to be visible, enabled and stable
+  -        - element is visible, enabled and stable
+  -        - scrolling into view if needed
+  -        - done scrolling
+  -        - <div id="wrap-button-1712206506010010" class="ins-adaptive-button-wrapper ins-adaptive-button-flex ins-selectable-element ins-element-wrap ins-element-grid-wrap ins-display-flex ins-sample-element-wrapper ins-element-select-menu ins-selected-option ins-default-cursor">…</div> from <div classname="ins-preview-wrapper ins-preview-wrapper-6271" class="ins-preview-wrapper ins-preview-wrapper-6271 ins-pos-middle-center">…</div> subtree intercepts pointer events
+  -      - retrying click action
+  -        - waiting 500ms
+
+folder not foundfolder not foundcreate client 2025-04-22 14:24:03.073789 DimaSurabaya error: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("text=\"Masuk dengan metode lain\"")
+  -     - locator resolved to <button type="button" data-testid="loginBtn" class="LoginFormV2__style__socialBtn">Masuk dengan metode lain</button>
+  -   - attempting click action
+  -     2 × waiting for element to be visible, enabled and stable
+  -       - element is visible, enabled and stable
+  -       - scrolling into view if needed
+  -       - done scrolling
+  -       - <div id="wrap-button-1712206506010010" class="ins-adaptive-button-wrapper ins-adaptive-button-flex ins-selectable-element ins-element-wrap ins-element-grid-wrap ins-display-flex ins-sample-element-wrapper ins-element-select-menu ins-selected-option ins-default-cursor">…</div> from <div classname="ins-preview-wrapper ins-preview-wrapper-6271" class="ins-preview-wrapper ins-preview-wrapper-6271 ins-pos-middle-center">…</div> subtree intercepts pointer events
+  -     - retrying click action
+  -     - waiting 20ms
+  -     2 × waiting for element to be visible, enabled and stable
+  -       - element is visible, enabled and stable
+  -       - scrolling into view if needed
+  -       - done scrolling
+  -       - <div id="wrap-button-1712206506010010" class="ins-adaptive-button-wrapper ins-adaptive-button-flex ins-selectable-element ins-element-wrap ins-element-grid-wrap ins-display-flex ins-sample-element-wrapper ins-element-select-menu ins-selected-option ins-default-cursor">…</div> from <div classname="ins-preview-wrapper ins-preview-wrapper-6271" class="ins-preview-wrapper ins-preview-wrapper-6271 ins-pos-middle-center">…</div> subtree intercepts pointer events
+  -     - retrying click action
+  -       - waiting 100ms
+  -     56 × waiting for element to be visible, enabled and stable
+  -        - element is visible, enabled and stable
+  -        - scrolling into view if needed
+  -        - done scrolling
+  -        - <div id="wrap-button-1712206506010010" class="ins-adaptive-button-wrapper ins-adaptive-button-flex ins-selectable-element ins-element-wrap ins-element-grid-wrap ins-display-flex ins-sample-element-wrapper ins-element-select-menu ins-selected-option ins-default-cursor">…</div> from <div classname="ins-preview-wrapper ins-preview-wrapper-6271" class="ins-preview-wrapper ins-preview-wrapper-6271 ins-pos-middle-center">…</div> subtree intercepts pointer events
+  -      - retrying click action
+  -        - waiting 500ms
+
+{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@KKutabumi", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KKutabumi"}
+folder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@KKutabumi", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KKutabumi"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 32.0, "unit": "GB", "chrome_profile": "profile-@edmmedan", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@edmmedan"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 51.98, "unit": "GB", "chrome_profile": "profile-jyskcileungsi01", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-jyskcileungsi01"}
+folder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@jysk21", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@jysk21"}
+folder not foundfolder not found{"status": "success", "quota": 26.52, "unit": "GB", "chrome_profile": "profile-@pluit_jysk", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@pluit_jysk"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 11.82, "unit": "GB", "chrome_profile": "profile-@balaraj69378544", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@balaraj69378544"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 11.7, "unit": "GB", "chrome_profile": "profile-DimaHerritage", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-DimaHerritage"}
+folder not foundfolder not found{"status": "success", "quota": 34.86, "unit": "GB", "chrome_profile": "profile-@new_kresna", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@new_kresna"}
+folder not foundfolder not found{"status": "success", "quota": 25.13, "unit": "GB", "chrome_profile": "profile-@kresna_gondrong", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@kresna_gondrong"}
+folder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 15:42:04.301987 @jurumudi_kresna error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+{"status": "success", "quota": 24.2, "unit": "GB", "chrome_profile": "profile-@sangian77204380", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@sangian77204380"}
+folder not foundfolder not found{"status": "success", "quota": 11.94, "unit": "GB", "chrome_profile": "profile-@KresnaSelapaja1", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KresnaSelapaja1"}
+folder not foundfolder not found{"status": "success", "quota": 23.99, "unit": "GB", "chrome_profile": "profile-@LuthanAkong", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@LuthanAkong"}
+folder not foundfolder not found{"status": "success", "quota": 11.93, "unit": "GB", "chrome_profile": "profile-@maspicibitung", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@maspicibitung"}
+folder not foundfolder not found{"status": "success", "quota": 11.79, "unit": "GB", "chrome_profile": "profile-@Empatkomatsu", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@Empatkomatsu"}
+folder not foundfolder not found{"status": "success", "quota": 11.75, "unit": "GB", "chrome_profile": "profile-@Komatsuaf5", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@Komatsuaf5"}
+folder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@Enamkomatsu", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@Enamkomatsu"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 16:15:16.281286 @MoradiFatmawati error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+{"status": "success", "quota": 4.99, "unit": "GB", "chrome_profile": "profile-@ascopriuk", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@ascopriuk"}
+folder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 16:22:14.714753 @banyuwasco error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 31.34, "unit": "GB", "chrome_profile": "profile-@smart_sentul", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@smart_sentul"}
+folder not foundfolder not found{"status": "success", "quota": 15.88, "unit": "GB", "chrome_profile": "profile-@MarundaKino", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@MarundaKino"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 5.0, "unit": "GB", "chrome_profile": "profile-@AritaSamarinda", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@AritaSamarinda"}
+folder not foundfolder not found{"status": "success", "quota": 11.97, "unit": "GB", "chrome_profile": "profile-@AritaPekanbaru", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@AritaPekanbaru"}
+folder not foundfolder not found{"status": "success", "quota": 4.95, "unit": "GB", "chrome_profile": "profile-aritajambi3717", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-aritajambi3717"}
+folder not foundfolder not found{"status": "success", "quota": 5.0, "unit": "GB", "chrome_profile": "profile-@sxtstock1", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@sxtstock1"}
+folder not foundfolder not found{"status": "success", "quota": 11.75, "unit": "GB", "chrome_profile": "profile-@BogorDima", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@BogorDima"}
+folder not foundfolder not found{"status": "success", "quota": 11.76, "unit": "GB", "chrome_profile": "profile-@BekasiDima", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@BekasiDima"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 23.75, "unit": "GB", "chrome_profile": "profile-sumutsmart4", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-sumutsmart4"}
+folder not foundfolder not found{"status": "success", "quota": 29.0, "unit": "GB", "chrome_profile": "profile-@KuninganJysk", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KuninganJysk"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 9.14, "unit": "GB", "chrome_profile": "profile-@bkpekalsel", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@bkpekalsel"}
+folder not foundfolder not found{"status": "success", "quota": 24.0, "unit": "GB", "chrome_profile": "profile-@kalselsnke", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@kalselsnke"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 21.45, "unit": "GB", "chrome_profile": "profile-@Kalsel2S", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@Kalsel2S"}
 folder not foundfolder not found

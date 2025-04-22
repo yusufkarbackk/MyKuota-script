@@ -51,7 +51,17 @@ with sync_playwright() as p:
     )
 
     try:
-        page.click("div.DialogInstallPWADesktop__style__closeIcon")
+        try:
+            page.wait_for_selector('div[id^="close-button"]', timeout=5000)
+
+            # Click the close button
+            page.click('div[id^="close-button"]')
+        except:
+            pass
+        try:
+            page.click("div.DialogInstallPWADesktop__style__closeIcon")
+        except:
+            pass
         try:
             page.click('text="Lanjut via website"')
         except:
@@ -241,7 +251,7 @@ with sync_playwright() as p:
                             }
 
                             with open(
-                                "C:\\laragon\\www\\dev\\MyKuota-script\\error_report.txt",
+                                "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt",
                                 "a",
                             ) as file:
                                 file.write(json.dumps(data) + "\n")
@@ -261,7 +271,7 @@ with sync_playwright() as p:
         remove_folders(profile_dir)
 
         with open(
-            "C:\\laragon\\www\\dev\\MyKuota-script\\error_report.txt", "a"
+            "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
         ) as file:
             file.write(
                 f"create client {datetime.datetime.now()} {trimedUsername} error: {e}\n"
