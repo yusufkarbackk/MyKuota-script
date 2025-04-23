@@ -106,4 +106,42 @@ folder not foundfolder not found{"status": "success", "quota": 29.0, "unit": "GB
 folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 9.14, "unit": "GB", "chrome_profile": "profile-@bkpekalsel", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@bkpekalsel"}
 folder not foundfolder not found{"status": "success", "quota": 24.0, "unit": "GB", "chrome_profile": "profile-@kalselsnke", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@kalselsnke"}
 folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 21.45, "unit": "GB", "chrome_profile": "profile-@Kalsel2S", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@Kalsel2S"}
-folder not foundfolder not found
+folder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 17:44:04.353491 @Ksxt7 error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+folder not foundfolder not foundcreate client 2025-04-22 17:47:32.736106 @kaltimluay error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 4.06, "unit": "GB", "chrome_profile": "profile-@jypopapua", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@jypopapua"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 5.0, "unit": "GB", "chrome_profile": "profile-@KalbarSdse", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KalbarSdse"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 21.55, "unit": "GB", "chrome_profile": "profile-@AritaSelor", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@AritaSelor"}
+folder not foundfolder not found{"status": "success", "quota": 31.34, "unit": "GB", "chrome_profile": "profile-@KalbarSswe", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@KalbarSswe"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 5.0, "unit": "GB", "chrome_profile": "profile-@nos081119190583", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@nos081119190583"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 23.65, "unit": "GB", "chrome_profile": "profile-@CegerKresna", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@CegerKresna"}
+folder not foundfolder not found{"status": "success", "quota": 4.95, "unit": "GB", "chrome_profile": "profile-@AritaKarawang", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@AritaKarawang"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 24.0, "unit": "GB", "chrome_profile": "profile-@AritaBanjarmas1", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@AritaBanjarmas1"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 23.39, "unit": "GB", "chrome_profile": "profile-kndesxt32420", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-kndesxt32420"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not found{"status": "success", "quota": 12.0, "unit": "GB", "chrome_profile": "profile-@dimapekan", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@dimapekan"}
+folder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 19:24:38.866155 @BmhbTengah error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+{"status": "success", "quota": 45.93, "unit": "GB", "chrome_profile": "profile-@SKetapang5", "profile_path": "C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-@SKetapang5"}
+folder not foundfolder not foundfolder not foundfolder not foundcreate client 2025-04-22 19:36:56.884099 @sumsel124 error: Page.wait_for_selector: Timeout 300000ms exceeded.
+Call log:
+  - waiting for locator("div.HeaderNavigationV2__style__profile") to be visible
+
+folder not foundfolder not foundcreate client 2025-04-22 19:39:55.447846 @sumutsmart2 error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+folder not foundfolder not foundcreate client 2025-04-23 17:02:22.263228 DimaSurabaya error: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"text\"]")
+
+folder not foundfolder not foundcreate client 2025-04-23 17:51:42.143049 DimaSurabaya error: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("text=\"Masuk dengan metode lain\"")
+
