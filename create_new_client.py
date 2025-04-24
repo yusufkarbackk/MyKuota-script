@@ -69,27 +69,25 @@ with sync_playwright() as p:
                 page.click('text="Masuk Dengan Twitter"')
             except:
                 pass
-            if profile_div.is_visible():
-                page.goto("https://my.telkomsel.com/detail-quota/internet")
-                page.wait_for_load_state("networkidle")
-                page.wait_for_selector(
-                    "span.QuotaDetail__style__t1", state="visible", timeout=300000
-                )
 
-                if (
-                    page.text_content("span.QuotaDetail__style__t1")
-                    == "Gagal Memuat Data"
-                ):
+            try:
+                page.wait_for_load_state("networkidle")
+                page.goto("https://my.telkomsel.com/detail-quota/internet")
+                try:
+                    page.wait_for_selector("span.QuotaDetail__style__t1", timeout=5000)
+                    gagal_muat_data_element = page.locator(
+                        "span.QuotaDetail__style__t1"
+                    ).text_content()
+                    gagal_muat_data_element == "Gagal Memuat Data"
                     data = {
                         "status": "failed",
-                        "message": "Web MyTelkomsel gagal memuat data",
+                        "message": "Web MyTelkomsel Gagal Memuat Data",
                     }
+
                     print(json.dumps(data))
-                    sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                else:
+                    # sys.stdout.flush()
+
+                except:
                     try:
                         page.locator("span.QuotaDetail__style__title").nth(
                             5
@@ -101,17 +99,8 @@ with sync_playwright() as p:
 
                         print(json.dumps(data))
                         # sys.stdout.flush()
-                        page.close()
-                        browser.close()
 
-                        remove_folders(profile_dir)
                     except:
-                        page.wait_for_load_state("networkidle")
-                        page.wait_for_selector(
-                            "span.QuotaDetail__style__t1",
-                            state="visible",
-                            timeout=30000,
-                        )
                         span_text = page.text_content("span.QuotaDetail__style__t1")
                         trimmed_text = span_text.split()[0]
                         unit = span_text.split()[1]
@@ -122,72 +111,17 @@ with sync_playwright() as p:
                         elif unit == "MB":
                             quota = "{:.2f}".format(float(trimmed_text) / 1024)
 
-                        data = {
-                            "status": "success",
-                            "quota": quota,
-                            "unit": unit,
-                            "chrome_profile": chrome_profile,
-                            "profile_path": profile_dir,
-                        }
+                        data = {"status": "success", "quota": quota, "unit": unit}
+                        with open(
+                            "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt",
+                            "a",
+                        ) as file:
+                            file.write(f"{data}\n")
 
                         print(json.dumps(data))
                         # sys.stdout.flush()
-                        page.close()
-                        browser.close()
-
-                        remove_folders(profile_dir)
-            else:
-                try:
-                    page.click("#allow")
-                except:
-                    pass
-                try:
-                    page.click("#allow")
-                except:
-                    pass
-                page.wait_for_load_state("networkidle")
-                page.locator('input[name="text"]').fill(trimedUsername)
-                page.click('text="Next"')
-                page.locator('input[name="password"]').fill(trimedPassword)
-                page.click('text="Log in"')
-
-                page.wait_for_load_state("networkidle")
-
-                # CEK TWEET ACCOUNT SAFE
-                if account_safe_element.is_visible():
-                    data = {"status": "failed", "message": "Twitter safe account"}
-
-                    print(json.dumps(data))
-                    # sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                elif authorize_mytelkomsel_element.is_visible():
-                    data = {
-                        "status": "failed",
-                        "message": "error authorize mytelkomsel app",
-                    }
-                    print(json.dumps(data))
-                    # sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                elif terjadi_kesalahan.is_visible():
-                    data = {"status": "failed", "message": "error terjadi kesalahan"}
-                    print(json.dumps(data))
-                    # sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                    remove_profile(profile_dir)
-                else:
-                    page.wait_for_load_state("networkidle")
-                    page.wait_for_selector(
-                        "div.HeaderNavigationV2__style__profile",
-                        state="visible",
-                        timeout=300000,
-                    )
-
+            except:
+                if profile_div.is_visible():
                     page.goto("https://my.telkomsel.com/detail-quota/internet")
                     page.wait_for_load_state("networkidle")
                     page.wait_for_selector(
@@ -248,11 +182,133 @@ with sync_playwright() as p:
                                 "profile_path": profile_dir,
                             }
 
-                            with open(
-                                "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt",
-                                "a",
-                            ) as file:
-                                file.write(json.dumps(data) + "\n")
+                            print(json.dumps(data))
+                            # sys.stdout.flush()
+                            page.close()
+                            browser.close()
+
+                            remove_folders(profile_dir)
+                else:
+                    try:
+                        page.click("#allow")
+                    except:
+                        pass
+                    try:
+                        page.click("#allow")
+                    except:
+                        pass
+                    page.wait_for_load_state("networkidle")
+                    page.locator('input[name="text"]').fill(trimedUsername)
+                    page.click('text="Next"')
+                    page.locator('input[name="password"]').fill(trimedPassword)
+                    page.click('text="Log in"')
+
+                    page.wait_for_load_state("networkidle")
+
+                    # CEK TWEET ACCOUNT SAFE
+                    if account_safe_element.is_visible():
+                        data = {"status": "failed", "message": "Twitter safe account"}
+
+                    print(json.dumps(data))
+                    # sys.stdout.flush()
+                    page.close()
+                    browser.close()
+                    remove_folders(profile_dir)
+                elif authorize_mytelkomsel_element.is_visible():
+                    data = {
+                        "status": "failed",
+                        "message": "error authorize mytelkomsel app",
+                    }
+                    print(json.dumps(data))
+                    # sys.stdout.flush()
+                    page.close()
+                    browser.close()
+                    remove_folders(profile_dir)
+                elif terjadi_kesalahan.is_visible():
+                    data = {"status": "failed", "message": "error terjadi kesalahan"}
+                    print(json.dumps(data))
+                    # sys.stdout.flush()
+                    page.close()
+                    browser.close()
+                    remove_folders(profile_dir)
+                    remove_profile(profile_dir)
+                else:
+                    page.wait_for_load_state("networkidle")
+                    page.wait_for_selector(
+                        "div.HeaderNavigationV2__style__profile",
+                        state="visible",
+                        timeout=300000,
+                    )
+
+                        page.goto("https://my.telkomsel.com/detail-quota/internet")
+                        page.wait_for_load_state("networkidle")
+                        page.wait_for_selector(
+                            "span.QuotaDetail__style__t1",
+                            state="visible",
+                            timeout=300000,
+                        )
+
+                        if (
+                            page.text_content("span.QuotaDetail__style__t1")
+                            == "Gagal Memuat Data"
+                        ):
+                            data = {
+                                "status": "failed",
+                                "message": "Web MyTelkomsel gagal memuat data",
+                            }
+                            print(json.dumps(data))
+                            sys.stdout.flush()
+                            page.close()
+                            browser.close()
+                            remove_folders(profile_dir)
+                        else:
+                            try:
+                                page.locator("span.QuotaDetail__style__title").nth(
+                                    5
+                                ).text_content() == "Anda tidak memiliki kuota"
+                                data = {
+                                    "status": "success",
+                                    "quota": 0.0,
+                                }
+
+                                print(json.dumps(data))
+                                # sys.stdout.flush()
+                                page.close()
+                                browser.close()
+
+                                remove_folders(profile_dir)
+                            except:
+                                page.wait_for_load_state("networkidle")
+                                page.wait_for_selector(
+                                    "span.QuotaDetail__style__t1",
+                                    state="visible",
+                                    timeout=30000,
+                                )
+                                span_text = page.text_content(
+                                    "span.QuotaDetail__style__t1"
+                                )
+                                trimmed_text = span_text.split()[0]
+                                unit = span_text.split()[1]
+                                # quota = "{:.2f}".format(float(688.81) / 1024)
+
+                                if unit == "GB":
+                                    quota = float(trimmed_text)
+                                elif unit == "MB":
+                                    quota = "{:.2f}".format(float(trimmed_text) / 1024)
+
+                                data = {
+                                    "status": "success",
+                                    "quota": quota,
+                                    "unit": unit,
+                                    "chrome_profile": chrome_profile,
+                                    "profile_path": profile_dir,
+                                }
+
+                                with open(
+                                    "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt",
+                                    "a",
+                                ) as file:
+                                    file.write(json.dumps(data) + "\n")
 
                 print(json.dumps(data))
                 # sys.stdout.flush()
