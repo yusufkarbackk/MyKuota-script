@@ -1,14 +1,12 @@
 import json
 import os
 from dotenv import load_dotenv
-
 from playwright.sync_api import sync_playwright
 import sys
 import datetime
-import time
-
 load_dotenv()
 from remove_folders import remove_folders
+from remove_profile import remove_profile
 
 username = sys.argv[1]
 password = sys.argv[2]
@@ -17,9 +15,10 @@ trimedPassword = password.replace(" ", "")
 trimedUsername = username.replace(" ", "")
 
 # trimedPassword = "batiku232"
-# trimedUsername = "@dimapekan"
+# trimedUsername = "DimaSurabaya"
 
-profile_dir = f"C:\\Users\\Administrator\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data\\profile-{trimedUsername}"
+profile_dir = f"{os.getenv('PROFILE_DIR')}{trimedUsername}"
+print(profile_dir)
 chrome_profile = f"profile-{trimedUsername}"
 # Check if the directory exists, if not, create it
 if not os.path.exists(profile_dir):
@@ -28,7 +27,7 @@ if not os.path.exists(profile_dir):
 with sync_playwright() as p:
     browser = p.chromium.launch_persistent_context(
         headless=False,
-        executable_path="C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        executable_path=os.getenv('EXECUTABLE_PATH'),
         user_data_dir=f"{profile_dir}",
         args=["--disable-notifications", "--disable-logging"],
         slow_mo=5000,
@@ -53,8 +52,6 @@ with sync_playwright() as p:
     try:
         try:
             page.wait_for_selector('div[id^="close-button"]', timeout=5000)
-
-            # Click the close button
             page.click('div[id^="close-button"]')
         except:
             pass
@@ -182,6 +179,7 @@ with sync_playwright() as p:
                     page.close()
                     browser.close()
                     remove_folders(profile_dir)
+                    remove_profile(profile_dir)
                 else:
                     page.wait_for_load_state("networkidle")
                     page.wait_for_selector(
@@ -266,9 +264,11 @@ with sync_playwright() as p:
         data = {"status": "failed", "message": f"{e}"}
         print(json.dumps(data))
         # sys.stdout.flush()
+        remove_folders(profile_dir)
+        remove_profile(profile_dir)
         page.close()
         browser.close()
-        remove_folders(profile_dir)
+        
 
         with open(
             "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
