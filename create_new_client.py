@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 import sys
 import datetime
+
 load_dotenv()
 from remove_folders import remove_folders
 from remove_profile import remove_profile
@@ -27,7 +28,7 @@ if not os.path.exists(profile_dir):
 with sync_playwright() as p:
     browser = p.chromium.launch_persistent_context(
         headless=False,
-        executable_path=os.getenv('EXECUTABLE_PATH'),
+        executable_path=os.getenv("EXECUTABLE_PATH"),
         user_data_dir=f"{profile_dir}",
         args=["--disable-notifications", "--disable-logging"],
         slow_mo=5000,
@@ -209,36 +210,39 @@ with sync_playwright() as p:
                     if account_safe_element.is_visible():
                         data = {"status": "failed", "message": "Twitter safe account"}
 
-                    print(json.dumps(data))
-                    # sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                elif authorize_mytelkomsel_element.is_visible():
-                    data = {
-                        "status": "failed",
-                        "message": "error authorize mytelkomsel app",
-                    }
-                    print(json.dumps(data))
-                    # sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                elif terjadi_kesalahan.is_visible():
-                    data = {"status": "failed", "message": "error terjadi kesalahan"}
-                    print(json.dumps(data))
-                    # sys.stdout.flush()
-                    page.close()
-                    browser.close()
-                    remove_folders(profile_dir)
-                    remove_profile(profile_dir)
-                else:
-                    page.wait_for_load_state("networkidle")
-                    page.wait_for_selector(
-                        "div.HeaderNavigationV2__style__profile",
-                        state="visible",
-                        timeout=300000,
-                    )
+                        print(json.dumps(data))
+                        # sys.stdout.flush()
+                        page.close()
+                        browser.close()
+                        remove_folders(profile_dir)
+                    elif authorize_mytelkomsel_element.is_visible():
+                        data = {
+                            "status": "failed",
+                            "message": "error authorize mytelkomsel app",
+                        }
+                        print(json.dumps(data))
+                        # sys.stdout.flush()
+                        page.close()
+                        browser.close()
+                        remove_folders(profile_dir)
+                    elif terjadi_kesalahan.is_visible():
+                        data = {
+                            "status": "failed",
+                            "message": "error terjadi kesalahan",
+                        }
+                        print(json.dumps(data))
+                        # sys.stdout.flush()
+                        page.close()
+                        browser.close()
+                        remove_folders(profile_dir)
+                        remove_profile(profile_dir)
+                    else:
+                        page.wait_for_load_state("networkidle")
+                        page.wait_for_selector(
+                            "div.HeaderNavigationV2__style__profile",
+                            state="visible",
+                            timeout=300000,
+                        )
 
                         page.goto("https://my.telkomsel.com/detail-quota/internet")
                         page.wait_for_load_state("networkidle")
@@ -324,7 +328,6 @@ with sync_playwright() as p:
         remove_profile(profile_dir)
         page.close()
         browser.close()
-        
 
         with open(
             "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
