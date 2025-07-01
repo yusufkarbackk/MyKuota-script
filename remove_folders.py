@@ -18,11 +18,11 @@ def remove_folders(profile_path):
                 #print(f"Deleted: {folder_path}")
             except Exception as e:
                 with open(
-                "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
+                os.getenv('ERROR_REPORT_FILEI'), "a"
                 ) as file:
                     file.write(f"{e}")
         else:
             with open(
-                "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
+                os.getenv('ERROR_REPORT_FILEI'), "a"
             ) as file:
                 file.write("folder not found")

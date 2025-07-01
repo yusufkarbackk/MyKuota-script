@@ -114,7 +114,7 @@ with sync_playwright() as p:
 
                         data = {"status": "success", "quota": quota, "unit": unit}
                         with open(
-                            "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt",
+                            os.getenv('ERROR_REPORT_FILEI'),
                             "a",
                         ) as file:
                             file.write(f"{data}\n")
@@ -309,7 +309,7 @@ with sync_playwright() as p:
                                 }
 
                                 with open(
-                                    "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt",
+                                    os.getenv('ERROR_REPORT_FILEI'),
                                     "a",
                                 ) as file:
                                     file.write(json.dumps(data) + "\n")
@@ -330,7 +330,7 @@ with sync_playwright() as p:
         browser.close()
 
         with open(
-            "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
+            os.getenv('ERROR_REPORT_FILEI'), "a"
         ) as file:
             file.write(
                 f"create client {datetime.datetime.now()} {trimedUsername} error: {e}\n"

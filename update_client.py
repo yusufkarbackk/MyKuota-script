@@ -7,10 +7,12 @@ import datetime
 import shutil
 import tempfile
 from remove_folders import remove_folders
+
 load_dotenv()
 username = sys.argv[1]
 password = sys.argv[2]
-
+# trimedPassword = "batiku232"
+# trimedUsername = "@KKutabumi"
 trimedPassword = password.replace(" ", "")
 trimedUsername = username.replace(" ", "")
 
@@ -21,10 +23,10 @@ chrome_profile = f"profile-{trimedUsername}"
 if not os.path.exists(profile_dir):
     os.makedirs(profile_dir)
 
-with sync_playwright() as p: 
+with sync_playwright() as p:
     browser = p.chromium.launch_persistent_context(
         headless=False,
-        executable_path=os.getenv('EXECUTABLE_PATH'),
+        executable_path=os.getenv("EXECUTABLE_PATH"),
         user_data_dir=f"{profile_dir}",
         args=["--disable-notifications", "--disable-logging"],
         slow_mo=5000,
@@ -95,8 +97,10 @@ with sync_playwright() as p:
                     print(json.dumps(data))
 
         else:
-            page.click("div.DialogInstallPWADesktop__style__closeIcon")
-
+            try:
+                page.click("div.DialogInstallPWADesktop__style__closeIcon")
+            except:
+                pass
             try:
                 page.click('text="Lanjut via website"')
             except:
@@ -146,9 +150,7 @@ with sync_playwright() as p:
                             quota = "{:.2f}".format(float(trimmed_text) / 1024)
 
                         data = {"status": "success", "quota": quota, "unit": unit}
-                        with open(
-                            "C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a"
-                        ) as file:
+                        with open(os.getenv("ERROR_REPORT_FILEI"), "a") as file:
                             file.write(f"{data}\n")
 
                         print(json.dumps(data))
@@ -157,6 +159,10 @@ with sync_playwright() as p:
             except:
                 page.click('text="Masuk dengan metode lain"')
                 page.click('text="Masuk Dengan Twitter"')
+                try:                
+                    page.click('text="Masuk Dengan Twitter"')
+                except:
+                    pass
                 page.click("#allow")
                 try:
                     page.click("#allow")
@@ -243,7 +249,7 @@ with sync_playwright() as p:
         print(json.dumps(data))
         # sys.stdout.flush()
 
-        with open("C:\\Users\\Administrator\\dev\\MyKuota-script\\error_report.txt", "a") as file:
+        with open(os.getenv("ERROR_REPORT_FILEI"), "a") as file:
             file.write(
                 f"update client {datetime.datetime.now()} {trimedUsername} error: {e}\n"
             )
